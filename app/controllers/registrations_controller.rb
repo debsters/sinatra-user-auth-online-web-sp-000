@@ -11,7 +11,7 @@ class RegistrationsController < ApplicationController
     @user = User.new(name: params["name"], email: params["email"], password: params["password"])
     @user.save
     # session[:id] = @user.id
-    session[:user_id] = @user.id
+    # session[:user_id] = @user.id
 
     # this redirect takes us to the route: get '/users/home' that is in the Users Controller
     #   go and look at that route in the Users Controller.
