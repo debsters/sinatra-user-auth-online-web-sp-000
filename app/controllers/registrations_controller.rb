@@ -10,7 +10,7 @@ class RegistrationsController < ApplicationController
     # setting the session[:id] equal to the user's id here
     @user = User.new(name: params["name"], email: params["email"], password: params["password"])
     @user.save
-    # session[:id] = @user.id
+    session[:id] = @user.id
     # session[:user_id] = @user.id
 
     # this redirect takes us to the route: get '/users/home' that is in the Users Controller
