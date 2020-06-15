@@ -17,8 +17,8 @@ class SessionsController < ApplicationController
     #  that route is in the Users Controller. Go check out the code there.
     @user = User.find_by(email: params["email"], password: params["password"])
     if @user
-       session[:user_id] = @user.id
-      # session[:id] = @user.id
+      session[:id] = @user.id
+      # session[:user_id] = @user.id
       redirect '/users/home'
     end
     redirect '/sessions/login'
